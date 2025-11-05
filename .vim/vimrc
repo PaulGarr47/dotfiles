@@ -20,7 +20,6 @@ autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " Set scripts to executable from shell if a shebang is present
-au BufWritePost * if getline(1) =~ "^#!" | silent !chmod +x <afile> | endif
 " If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
 " Or better yet, read /usr/share/vim/vim80/vimrc_example.vim or the vim manual
 " and configure vim to your own liking!
