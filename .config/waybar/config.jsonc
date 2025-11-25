@@ -1,4 +1,4 @@
-// -*- mode: jsonc -*-
+// -*- mode jsonc -*-
 {
      "layer": "top", // Waybar at top layer
      "position": "top", // Waybar position (top|bottom|left|right)
@@ -18,6 +18,7 @@
         "wireplumber",
         "network",
         "cpu",
+	"custom/gpu",
         "memory",
         "backlight",
         "battery",
@@ -68,6 +69,13 @@
         "format": "  {usage}%",
         "tooltip": false
     },
+    "custom/gpu": {
+	"exec": "~/.config/waybar/scripts/gpuinfo.sh",
+    	"format": "  {text}",
+	"interval": 2,
+	"on-click": "kitty nvtop",
+	"return-type": "json"
+    },
     "memory": {
 	"interval": 5,
         "format": "  {}%",
@@ -112,7 +120,7 @@
             "warning": 20,
             "critical": 10
         },
-        "tooltip": false
+        "tooltip": true
     },
      "network": {
 	"format-wifi" : "{icon}",
