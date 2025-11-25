@@ -1,17 +1,13 @@
 /**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
  * Rofi Theme File
- * Rofi Version: 1.7.3
+ * Rofi Version: 2.0.0
  **/
 
 /*****----- Configuration -----*****/
 configuration {
     modi:                       "drun";
     show-icons:                 true;
-    icon-theme:			"WhiteSur";
+    icon-theme:			"Mignon-pastel";
     display-drun:               "";
     display-run:                "";
     display-filebrowser:        "";
@@ -32,17 +28,17 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       400px;
+    width:                       550px;
     x-offset:                    0px;
     y-offset:                    0px;
 
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
-    border-radius:               12px;
-    border-color:                @selected;
-    background-color:            @background;
+    border:                      1px solid;
+    border-radius:               10px;
+    border-color:                @lavender;
+    background-color:            @base;
     cursor:                      "default";
 }
 
@@ -54,7 +50,7 @@ mainbox {
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px 0px 0px 0px;
-    border-color:                @selected;
+    border-color:                @base;
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
 }
@@ -67,9 +63,9 @@ inputbar {
     padding:                     15px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
-    background-color:            @selected;
-    text-color:                  @background;
+    border-color:                @lavender;
+    background-color:            @base;
+    text-color:                  @text;
     children:                    ["prompt", "entry" ];
 }
 
@@ -101,7 +97,7 @@ listview {
     lines:                       6;
     cycle:                       true;
     dynamic:                     true;
-    scrollbar:                   false;
+    scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;
@@ -112,16 +108,16 @@ listview {
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @base;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  @text;
     cursor:                      "default";
 }
 scrollbar {
     handle-width:                5px ;
-    handle-color:                @selected;
+    handle-color:                @mauve;
     border-radius:               0px;
-    background-color:            @background-alt;
+    background-color:            @base;
 }
 
 /*****----- Elements -----*****/
@@ -132,18 +128,33 @@ element {
     padding:                     8px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
-    background-color:            transparent;
-    text-color:                  @foreground;
+    border-color:                @lavender;
+    background-color:            @base;
+    text-color:                  @text;
     cursor:                      pointer;
 }
 element normal.normal {
-    background-color:            @background;
-    text-color:                  @foreground;
+    background-color:            @base;
+    text-color:                  @text;
+}
+element alternate.normal {
+    background-color:		inherit;
+}
+element normal.active, element alternate.active {
+    background-color:		@base;
 }
 element selected.normal {
-    background-color:            @background-alt;
-    text-color:                  @foreground;
+    background-color:            @overlay0;
+    text-color:                  @text;
+}
+element selected.active {
+    background-color:		@green;
+}
+element normal.urgent {
+   background-color:		@yellow;
+}
+element selected.urgent, alternate.urgent {
+    background-color:		@red;
 }
 element-icon {
     background-color:            transparent;
@@ -152,10 +163,8 @@ element-icon {
     cursor:                      inherit;
 }
 element-text {
-    background-color:            transparent;
+    background-color:            inherit;
     text-color:                  inherit;
-    highlight:                   inherit;
-    cursor:                      inherit;
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
@@ -165,13 +174,13 @@ error-message {
     padding:                     15px;
     border:                      2px solid;
     border-radius:               12px;
-    border-color:                @selected;
-    background-color:            @background;
-    text-color:                  @foreground;
+    border-color:                @red;
+    background-color:            @base;
+    text-color:                  @text;
 }
 textbox {
-    background-color:            @background;
-    text-color:                  @foreground;
+    background-color:            inherit;
+    text-color:                  inherit;
     vertical-align:              0.5;
     horizontal-align:            0.0;
     highlight:                   none;
