@@ -1,0 +1,15 @@
+{ 
+	"wireplumber": {
+		"format": "{icon}",
+		"format-bluetooth": "󰂰",
+		"nospacing": 1,
+		"tooltip-format": "Volume : {volume}%",
+		"format-muted": "󰝟",
+		"format-icons": {
+			"headphone": "",
+			"default": ["󰖀","󰕾",""]
+		},
+		"on-click": "helvum",
+		"scroll-step": 1
+	}
+}

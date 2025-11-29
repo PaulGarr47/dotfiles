@@ -1,0 +1,9 @@
+{
+	"custom/gpu": {
+		"exec": "~/.config/waybar/scripts/gpuinfo.sh",
+		"format": "  {text}",
+		"interval": 2,
+		"on-click": "kitty nvtop",
+		"return-type": "json"
+	}
+}

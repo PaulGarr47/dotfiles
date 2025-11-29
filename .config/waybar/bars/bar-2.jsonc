@@ -1,0 +1,71 @@
+// -*- mode jsonc -*-
+{
+	"include": [
+		"~/.config/waybar/modules/cpu.jsonc",
+		"~/.config/waybar/modules/clock.jsonc",
+		"~/.config/waybar/modules/memory.jsonc",
+		"~/.config/waybar/modules/custom-gpu.jsonc",
+		"~/.config/waybar/modules/network.jscon"
+	],
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+	"modules-center": [
+		"clock"
+	],
+    "modules-right": [
+        "wireplumber",
+        "cpu",
+        "memory",
+	"custom/gpu"
+    ],
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-click-right": "fullscreen",
+        "icon-theme": "WhiteSur",
+        "icon-size": 25,
+        "tooltip-format": "{title}"
+    },
+    //  Modules configuration
+    "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{name}: {icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         },
+    "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+     },
+    "tray": {
+        "spacing": 10
+    },
+     "wireplumber": {
+        "format": "{icon}",
+        "format-bluetooth": "󰂰",
+        "nospacing": 1,
+        "tooltip-format": "Volume : {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "",
+            "default": ["󰖀","󰕾",""]
+        },
+        "on-click": "helvum",
+        "scroll-step": 1
+    }
+}
