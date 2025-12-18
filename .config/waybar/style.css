@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-    background-color: #181825;
+    background-color: transparent;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -48,16 +48,16 @@ window#waybar.chromium {
     box-shadow: inherit;
     text-shadow: inherit;
     color: #1e1e2e;
-    background-color: #cdd6f4;
+    background-color: #01A2E9;
 }
 
 #workspaces button.active {
     color: #1e1e2e;
-    background-color: #cdd6f4;
+    background-color: #01A2E9;
 }
 
 #workspaces button.urgent {
-    background-color: #f38ba8;
+    background-color: #EC0001;
 }
 
 #clock,
@@ -88,30 +88,30 @@ border-radius: 4px;
   color: #1793d1;
 }
 #cpu {
-  background-color: #fab387;
+  background-color: #D00903;
 }
 #custom-gpu {
-  background-color: #fab387;
+  background-color: #D12D02;
 }
 #memory {
-  background-color: #fab387;
+  background-color: #D10267;
 }
 #wireplumber {
-  background-color: #f9e2af;
+  background-color: #FF0088;
 }
 
 #network {
-  background-color: #94e2d5;
+  background-color: #C702D1;
   padding-right: 17px;
 }
 
 #clock {
   font-family: JetBrainsMono Nerd Font;
-  background-color: #cba6f7;
+  background-color: #ED008E;
 }
 
 #custom-power {
-  background-color: #f2cdcd;
+  background-color: #EC0001;
 }
 
 
