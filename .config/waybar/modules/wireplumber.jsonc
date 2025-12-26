@@ -9,7 +9,7 @@
 			"headphone": "",
 			"default": ["󰖀","󰕾",""]
 		},
-		"on-click": "helvum",
+		"on-click": "qpwgraph",
 		"scroll-step": 1
 	}
 }

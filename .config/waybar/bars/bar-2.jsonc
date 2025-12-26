@@ -5,7 +5,7 @@
 		"~/.config/waybar/modules/clock.jsonc",
 		"~/.config/waybar/modules/memory.jsonc",
 		"~/.config/waybar/modules/custom-gpu.jsonc",
-		"~/.config/waybar/modules/network.jscon"
+		"~/.config/waybar/modules/network.jsonc"
 	],
     // Choose the order of the modules
     "modules-left": [
