@@ -7,9 +7,6 @@
 [submodule ".vim/pack/plugin/start/surround"]
 	path = .vim/pack/plugin/start/surround
 	url = https://github.com/tpope/vim-surround
-[submodule ".vim/pack/plugin/start/vim-devicons"]
-	path = .vim/pack/plugin/start/vim-devicons
-	url = https://github.com/ryanoasis/vim-devicons.git
 [submodule ".vim/pack/plugin/start/vim-hexokinase"]
 	path = .vim/pack/plugin/start/vim-hexokinase
 	url = https://github.com/RRethy/vim-hexokinase.git
@@ -19,3 +16,9 @@
 [submodule ".vim/pack/plugin/start/deoplete.nvim"]
 	path = .vim/pack/plugin/start/deoplete
 	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule ".vim/pack/plugin/start/asyncomplete"]
+	path = .vim/pack/plugin/start/asyncomplete
+	url = https://github.com/prabirshrestha/asyncomplete.vim.git
+[submodule ".vim/pack/plugin/start/vim-airline"]
+	path = .vim/pack/plugin/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git

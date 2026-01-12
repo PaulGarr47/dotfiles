@@ -12,20 +12,36 @@ runtime! archlinux.vim
 set encoding=utf8
 set guifont=JetBrainsMono\ Nerd\ Font\ 12
 set termguicolors
-
+set number
 colorscheme catppuccin_mocha
-
+let &t_ut=''
 syntax enable
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p 
 " Close the tab if NERDTree is the only window remaning in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
 
+
+"asyncomplete tab completion remap
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+
+let g:asyncomplete_auto_popup = 1
+let g:ayncomplete_autocomplteopt = 0
+set completeopt=menuone,noinsert,noselect,preview
+
+au User asyncomplete_setup call asyncomplete#register_source(
+\   asyncomplete#sources#ale#get_source_options({
+\       'priority': 10,
+\   })
+\)
+let g:ale_completion_autoimport = 1
 " Hexokinase Patterns to match
 let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
 " Hexokinase Highlighting
 let g:Hexokinase_highlighters = ['backgroundfull']
-
+let g:airline#extensions#tabline#enabled=1
 " Set scripts to executable from shell if a shebang is present
 " If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
 " Or better yet, read /usr/share/vim/vim80/vimrc_example.vim or the vim manual
