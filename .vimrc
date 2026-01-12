@@ -12,7 +12,9 @@ runtime! archlinux.vim
 set encoding=utf8
 set guifont=JetBrainsMono\ Nerd\ Font\ 12
 set termguicolors
+
 colorscheme catppuccin_mocha
+
 syntax enable
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p 
