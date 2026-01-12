@@ -19,15 +19,11 @@ autocmd VimEnter * NERDTree | wincmd p
 " Close the tab if NERDTree is the only window remaning in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
 
-" Enabling Semantic Highlighting for YouCompelteMe
-let g:ycm_enable_semantic_highlighting=1
-" Inlay hints for YouCompleteMe
-let g:ycm_enable_inlay_hints=1 
-
 " Hexokinase Patterns to match
 let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
 " Hexokinase Highlighting
 let g:Hexokinase_highlighters = ['backgroundfull']
+
 " Set scripts to executable from shell if a shebang is present
 " If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
 " Or better yet, read /usr/share/vim/vim80/vimrc_example.vim or the vim manual
