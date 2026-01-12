@@ -16,3 +16,6 @@
 [submodule ".vim/pack/plugin/start/catppuccin"]
 	path = .vim/pack/plugin/start/catppuccin
 	url = https://github.com/catppuccin/vim
+[submodule ".vim/pack/plugin/start/deoplete.nvim"]
+	path = .vim/pack/plugin/start/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
