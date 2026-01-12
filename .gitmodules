@@ -1,3 +1,18 @@
 [submodule ".vim/pack/plugin/start/ale"]
 	path = .vim/pack/plugin/start/ale
 	url = https://github.com/dense-analysis/ale
+[submodule ".vim/pack/plugin/start/nerdtree"]
+	path = .vim/pack/plugin/start/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule ".vim/pack/plugin/start/surround"]
+	path = .vim/pack/plugin/start/surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/pack/plugin/start/vim-devicons"]
+	path = .vim/pack/plugin/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons.git
+[submodule ".vim/pack/plugin/start/vim-hexokinase"]
+	path = .vim/pack/plugin/start/vim-hexokinase
+	url = https://github.com/RRethy/vim-hexokinase.git
+[submodule ".vim/pack/plugin/start/catppuccin"]
+	path = .vim/pack/plugin/start/catppuccin
+	url = https://github.com/catppuccin/vim
