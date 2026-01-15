@@ -79,7 +79,7 @@ rehash_precmd() {
 }
 
 add-zsh-hook -Uz precmd rehash_precmd
-
+TRAPUSR1() { rehash }
 
 add-zsh-hook -Uz precmd reset_broken_terminal
 alias ls='ls --color=auto'
