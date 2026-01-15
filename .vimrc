@@ -28,15 +28,18 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 let g:asyncomplete_auto_popup = 1
-let g:ayncomplete_autocomplteopt = 0
+let g:asyncomplete_auto_completeopt = 0
 set completeopt=menuone,noinsert,noselect,preview
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 au User asyncomplete_setup call asyncomplete#register_source(
 \   asyncomplete#sources#ale#get_source_options({
 \       'priority': 10,
 \   })
 \)
+
 let g:ale_completion_autoimport = 1
+
 " Hexokinase Patterns to match
 let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
 " Hexokinase Highlighting
