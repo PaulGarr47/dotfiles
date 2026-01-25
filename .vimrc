@@ -13,6 +13,12 @@ set encoding=utf8
 set guifont=JetBrainsMono\ Nerd\ Font\ 12
 set termguicolors
 set number
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 colorscheme catppuccin_mocha
 let &t_ut=''
 syntax enable
@@ -41,7 +47,7 @@ au User asyncomplete_setup call asyncomplete#register_source(
 let g:ale_completion_autoimport = 1
 
 " Hexokinase Patterns to match
-let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
+let g:Hexokinase_optInPatterns = 'full_hex,triple_hex,rgb,rgba,hsl,hsla,colour_names'
 " Hexokinase Highlighting
 let g:Hexokinase_highlighters = ['backgroundfull']
 let g:airline#extensions#tabline#enabled=1
