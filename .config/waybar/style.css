@@ -4,13 +4,14 @@
     min-height: 0;
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "JetBrainsMono Nerd Font", FontAwesome;
-    font-size: 13px; 
+    font-size: 14px;
 }
 
 window#waybar {
-    background-color: transparent;
+    all:unset;
+   /* background-color: transparent;
     transition-property: background-color;
-    transition-duration: .5s;
+    transition-duration: .5s;*/
 }
 
 window#waybar.hidden {
@@ -48,16 +49,16 @@ window#waybar.chromium {
     box-shadow: inherit;
     text-shadow: inherit;
     color: #1e1e2e;
-    background-color: #01A2E9;
+    background-color: #176fb3;
 }
 
 #workspaces button.active {
     color: #1e1e2e;
-    background-color: #01A2E9;
+    background-color: #176fb3;
 }
 
 #workspaces button.urgent {
-    background-color: #EC0001;
+    background-color: #e50101;
 }
 
 #clock,
@@ -88,30 +89,30 @@ border-radius: 4px;
   color: #1793d1;
 }
 #cpu {
-  background-color: #D00903;
+  background-color: #be9adb;
 }
 #custom-gpu {
-  background-color: #D12D02;
+  background-color: #be9adb;
 }
 #memory {
-  background-color: #D10267;
+  background-color: #2f89ca;
 }
 #wireplumber {
-  background-color: #FF0088;
+  background-color: #be9adb;
 }
 
 #network {
-  background-color: #C702D1;
+  background-color: #be9adb;
   padding-right: 17px;
 }
 
 #clock {
   font-family: JetBrainsMono Nerd Font;
-  background-color: #ED008E;
+  background-color: #f116b8;
 }
 
 #custom-power {
-  background-color: #EC0001;
+  background-color: #2f89ca;
 }
 
 
