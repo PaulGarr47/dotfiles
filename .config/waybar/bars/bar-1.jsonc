@@ -1,17 +1,18 @@
 // -*- mode jsonc -*-
 {
-	"include": [
-		"~/.config/waybar/modules/clock.jsonc",
-		"~/.config/waybar/modules/custom-power.jsonc",
-		"~/.config/waybar/modules/network.jsonc",
-		"~/.config/waybar/modules/wireplumber.jsonc"
-	],
+"include": [
+    "~/.config/waybar/modules/clock.jsonc",
+    "~/.config/waybar/modules/custom-power.jsonc",
+    "~/.config/waybar/modules/network.jsonc",
+    "~/.config/waybar/modules/wireplumber.jsonc",
+    "~/.config/waybar/modules/hyprland-workspaces.jsonc"
+    ],
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces"
+        "clock"
     ],
     "modules-center": [
-	"clock"
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "tray",
@@ -26,20 +27,5 @@
         "icon-theme": "WhiteSur",
         "icon-size": 25,
         "tooltip-format": "{title}"
-    },
-    //  Modules configuration
-    "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "warp-on-scroll": false,
-         "format": "{name}: {icon}",
-         "format-icons": {
-             "urgent": "",
-             "focused": "",
-             "default": ""
-         },
-    "persistent-workspaces": {
-            "1": [],
-        }
-     }
+    }
 }

@@ -1,24 +1,25 @@
 // -*- mode jsonc -*-
 {
-	"include": [
-		"~/.config/waybar/modules/cpu.jsonc",
-		"~/.config/waybar/modules/clock.jsonc",
-		"~/.config/waybar/modules/memory.jsonc",
-		"~/.config/waybar/modules/custom-gpu.jsonc",
-		"~/.config/waybar/modules/network.jsonc"
-	],
+    "include": [
+        "~/.config/waybar/modules/cpu.jsonc",
+        "~/.config/waybar/modules/clock.jsonc",
+        "~/.config/waybar/modules/memory.jsonc",
+        "~/.config/waybar/modules/custom-gpu.jsonc",
+        "~/.config/waybar/modules/network.jsonc",
+        "~/.config/waybar/modules/hyprland-workspaces.jsonc"
+    ],
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces"
     ],
-	"modules-center": [
-		"clock"
-	],
+    "modules-center": [
+        "clock"
+    ],
     "modules-right": [
         "wireplumber",
         "cpu",
         "memory",
-	"custom/gpu"
+        "custom/gpu"
     ],
     "wlr/taskbar": {
         "format": "{icon}",
@@ -28,22 +29,6 @@
         "icon-size": 25,
         "tooltip-format": "{title}"
     },
-    //  Modules configuration
-    "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "warp-on-scroll": false,
-         "format": "{icon}",
-         "format-icons": {
-	     "urgent": "",	
-             "focused": "",
-             "default": ""
-         },
-    "persistent-workspaces": {
-            "1": [],
-            "2": [],
-        }
-     },
     "tray": {
         "spacing": 10
     },

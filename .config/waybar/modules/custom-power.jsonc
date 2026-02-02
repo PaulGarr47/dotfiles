@@ -1,7 +1,7 @@
 {
-	"custom/power": {
-		"format": "󰤆",
-		"tooltip": false,
-		"on-click": "~/.config/rofi/powermenu/powermenu.sh &"
-	}
+    "custom/power": {
+        "format": "󰤆",
+        "tooltip": false,
+        "on-click": "~/.config/rofi/powermenu/powermenu.sh &"
+    }
 }
