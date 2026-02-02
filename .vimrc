@@ -13,14 +13,20 @@ set encoding=utf8
 set guifont=JetBrainsMono\ Nerd\ Font\ 12
 set termguicolors
 set number
-" show existing tab with 4 spaces width
+" show tab as 4 spaces width
 set tabstop=4
-" when indenting with '>', use 4 spaces width
+" tab inserts 4 spaces
 set shiftwidth=4
-" On pressing tab, insert 4 spaces
+" ues spaces instead of tab
 set expandtab
 colorscheme catppuccin_mocha
 let &t_ut=''
+" See end of line characters
+set list
+" set trailing spaces character to 
+set listchars+=trail:◦
+" sets the end of line character to \ 
+set listchars+=eol:\ 
 syntax enable
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p 
